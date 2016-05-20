@@ -20,7 +20,14 @@ public class RoadAccidentFileWriter implements Runnable {
         this.outputWriter = new FileWriter(fileDestination);
     }
 
-    @Override
+        
+    public void setOutputWriter(FileWriter outputWriter) {
+		this.outputWriter = outputWriter;
+	}
+
+
+
+	@Override
     public void run() {
         try {
             long accidentCounter = 0;
@@ -39,4 +46,5 @@ public class RoadAccidentFileWriter implements Runnable {
             e.printStackTrace();
         }
     }
+    
 }
