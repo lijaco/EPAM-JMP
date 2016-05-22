@@ -1,8 +1,5 @@
 *.iml
-target/*
-.idea/*
-/target/
-
 .classpath
 .project
 bin/
+target/*
