@@ -63,7 +63,6 @@ public class EmployeeController {
         return repository.save(employee);
     }
 
-
     @RequestMapping(method= RequestMethod.DELETE, value= "employee/{id}", headers="Accept=application/json")
     public void delete(@PathVariable long id){
         LOG.info("Delete Employee: "+ id);
