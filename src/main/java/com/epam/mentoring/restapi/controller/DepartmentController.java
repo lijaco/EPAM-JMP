@@ -47,7 +47,7 @@ public class DepartmentController {
     }
 
     @RequestMapping(method= RequestMethod.PUT, value= "/departments/{id}", headers="Accept=application/json")
-public @ResponseBody void update(@RequestBody Department s, @PathVariable long id){
+    public @ResponseBody void update(@RequestBody Department s, @PathVariable long id){
         LOG.info("update Department: "+ id+ ","+ s.getName());
         if(s.getId()!= id)
             throw new BadRequestError("id is not match");
